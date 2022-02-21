@@ -55,6 +55,7 @@ public class UserController {
 	public ResponseEntity<String> healthCheck(@PathVariable int id){
 		String str = userService.healthCheck(id);
 		logger.info("HealthCheck Successful");
+		System.out.println("hi from second");
 		return new ResponseEntity<String>(str, HttpStatus.CREATED);
 	}
 	
